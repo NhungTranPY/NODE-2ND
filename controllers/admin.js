@@ -1,4 +1,5 @@
 const Product = require('../models/product');
+const { route } = require('../routes/admin');
 
 exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
@@ -36,6 +37,10 @@ exports.getEditProduct = (req, res, next) => {
     });
   })
 };
+
+exports.postEditProduct = (req, res, next) => {
+  
+}
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
